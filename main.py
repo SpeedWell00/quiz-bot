@@ -1,6 +1,7 @@
-def main():
-    print("Hello from lab-8-task-0!")
+from fastapi import FastAPI
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def read_root():
+    return {"message": "Hello, Task 1 Completed!"}
